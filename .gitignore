@@ -1,0 +1,4 @@
+.vscode/
+polynomial_tests
+web/dist/
+web/node_modules/

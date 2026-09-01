@@ -1,0 +1,333 @@
+:root {
+    color: #172033;
+    background: #f4f7fb;
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    font-synthesis: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    color: inherit;
+}
+
+.page {
+    min-height: 100vh;
+    padding: 28px 16px;
+}
+
+.calculator {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #d8e1ec;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 18px 48px rgb(34 60 88 / 10%);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #d8e1ec;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand > span:last-child {
+    display: grid;
+    gap: 2px;
+}
+
+.brand strong,
+.result strong {
+    font-weight: 600;
+}
+
+.brand small,
+.result small {
+    color: #637083;
+}
+
+.mark {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: #9dceff;
+    color: #102844;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.workspace {
+    display: grid;
+    gap: 18px;
+    padding: 22px;
+    background: #f7f9fc;
+}
+
+.editor {
+    display: grid;
+    gap: 10px;
+}
+
+.field-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.field-heading label {
+    font-weight: 600;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 58px 104px;
+    min-height: 70px;
+    overflow: hidden;
+    border: 1px solid #cad6e3;
+    border-radius: 13px;
+    background: #ffffff;
+}
+
+.input-row input {
+    min-width: 0;
+    border: 0;
+    padding: 18px;
+    outline-offset: -3px;
+    background: transparent;
+    color: #172033;
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+    font-size: 1.06rem;
+}
+
+.backspace,
+.calculate {
+    border: 0;
+    border-left: 1px solid #cad6e3;
+    cursor: pointer;
+}
+
+.backspace {
+    background: #ffffff;
+    color: #526176;
+}
+
+.calculate {
+    background: #9dceff;
+    color: #102844;
+    font-weight: 600;
+}
+
+.calculate:disabled {
+    cursor: wait;
+    opacity: 0.72;
+}
+
+.error {
+    min-height: 1.25em;
+    margin: 0;
+    font-size: 0.82rem;
+}
+
+.error {
+    color: #a82d3d;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+    padding: 16px;
+    border: 1px solid #d8e1ec;
+    border-radius: 13px;
+    background: #eef3f8;
+}
+
+.key {
+    min-width: 0;
+    min-height: 48px;
+    border: 1px solid #cad6e3;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.key:hover,
+.backspace:hover,
+.result-actions button:hover {
+    background: #e7f2ff;
+}
+
+.key-operator {
+    color: #1f66ad;
+    font-weight: 600;
+}
+
+.key-active {
+    border-color: #4f91d2;
+    background: #dceeff;
+    color: #194f86;
+}
+
+.result {
+    display: grid;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid #d8e1ec;
+    border-radius: 13px;
+    background: #ffffff;
+}
+
+.result output {
+    overflow-wrap: anywhere;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.55rem, 5vw, 2.2rem);
+}
+
+.result-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.result-actions button {
+    min-height: 40px;
+    padding: 0 14px;
+    border: 1px solid #cad6e3;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+details {
+    padding-top: 12px;
+    border-top: 1px solid #d8e1ec;
+}
+
+summary {
+    color: #526176;
+    cursor: pointer;
+    font-size: 0.84rem;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 8px 14px;
+    margin: 14px 0 0;
+    font-size: 0.84rem;
+}
+
+dt {
+    color: #637083;
+}
+
+dd {
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+}
+
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #2879c9;
+    outline-offset: 2px;
+}
+
+.screen-reader-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 560px) {
+    .page {
+        padding: 12px;
+    }
+
+    .header,
+    .workspace {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .input-row {
+        grid-template-columns: minmax(0, 1fr) 52px;
+    }
+
+    .calculate {
+        grid-column: 1 / -1;
+        min-height: 48px;
+        border-top: 1px solid #cad6e3;
+        border-left: 0;
+    }
+
+    .keypad {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    .key {
+        min-height: 46px;
+        font-size: 0.9rem;
+    }
+
+    dl {
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+    dd {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .keypad {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
