@@ -31,7 +31,7 @@ const {
                     <span class="mark" aria-hidden="true">P(x)</span>
                     <span>
                         <strong>PolyCalc</strong>
-                        <small>Polynomial · complex · rational</small>
+                        <small>Supports Polynomial And Complex Arithmetic</small>
                     </span>
                 </div>
             </header>
