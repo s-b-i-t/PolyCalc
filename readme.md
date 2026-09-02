@@ -2,6 +2,8 @@
 
 PolyCalc is a lightweight, browser-based computation engine that supports mixed operations between polynomials and complex numbers.
 
+Check it out [here](polycalc.shabitbhatt.com) to search the web.
+
 ## Features
 
 * **C++ Core**: Core computation performed in C++17 and compiled to WebAssembly via Emscripten
